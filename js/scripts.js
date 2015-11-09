@@ -19,4 +19,21 @@ $('a[href*=#]:not([href=#])').click(function() {
     }
 });
 
+var targetOffset = $("#section1").offset().top;
+console.log(targetOffset);
+$('#scrolled-nav-bar').hide();
+$('#initial-nav-bar').slideDown( "slow" );
+
+var $w = $(window).scroll(function(){
+  if ( $w.scrollTop() > 100 ) {
+    $('#scrolled-nav-bar').show();
+    $('#initial-nav-bar').hide();
+    console.log('here');
+  } else {
+    $('#scrolled-nav-bar').hide();
+    $('#initial-nav-bar').show();
+    console.log('there');
+  }
+});
+
 });

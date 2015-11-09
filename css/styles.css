@@ -61,6 +61,10 @@ section {
 	font-size: 5em;
 }
 
+.navbar-font-size {
+	font-size: 1.5em;
+}
+
 .well {
 	border-color:transparent;
 }
@@ -91,7 +95,7 @@ a.list-group-item.active,[class*='-info'] {
 }
 
 #section5,#section7,#section7 a {
-	
+
     color:black;
 }
 

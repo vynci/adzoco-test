@@ -20,12 +20,12 @@ html,body {
 }
 
 .navbar-trans {
-	background-color:#279ddd;
-    color:#fff;
+	background-color:#30E6E6;
+    color:white;
 }
 
 .navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
-	background-color:#38afef;
+	background-color:#2DD6D6;
 }
 
 .navbar-trans a{
@@ -75,8 +75,8 @@ a.list-group-item.active,[class*='-info'] {
 }
 
 #section1 {
-	background-color: #168ccc;
-    color:#dedeff;
+	background-color: #2ecece;
+    color:white;
 }
 
 #section2 {

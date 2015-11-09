@@ -25,13 +25,13 @@ $('#scrolled-nav-bar').hide();
 $('#initial-nav-bar').slideDown( "slow" );
 
 var $w = $(window).scroll(function(){
-  if ( $w.scrollTop() > 100 ) {
-    $('#scrolled-nav-bar').show();
+  if ( $w.scrollTop() > 200 ) {
+    $('#scrolled-nav-bar').fadeIn( 'fast' );
     $('#initial-nav-bar').hide();
     console.log('here');
   } else {
     $('#scrolled-nav-bar').hide();
-    $('#initial-nav-bar').show();
+    $('#initial-nav-bar').fadeIn( 'fast' );
     console.log('there');
   }
 });

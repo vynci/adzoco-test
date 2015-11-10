@@ -15,6 +15,7 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
+	<div id="blackOverlay" class="black-overlay"></div>
 <nav class="navbar navbar-trans-initial navbar-fixed-top" id="initial-nav-bar" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -69,7 +70,11 @@
 </nav>
 
 <nav id="myNavmenu" data-disable-scrolling="false" class="navmenu-bg navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
-	<a class="navmenu-brand" href="#">Adzoco</a>
+	<a class="exit-button text-center" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+		<i class="fa fa-times"></i>
+	</a>
+	<a class="navmenu-brand" href="#">Adzoco </a>
+
 	<ul class="nav navmenu-nav">
 		<li><a href="">Home</a></li>
 		<li><a href="">Why Use This?</a></li>

@@ -63,6 +63,8 @@ html,body {
 	background: #36363d;
 	color: white;
 	border-color: transparent;
+	padding-top: 3%;
+	padding-left: 3%;
 }
 
 .navmenu-bg a {
@@ -93,7 +95,7 @@ section {
 
 .equal-sign-font {
 	font-size: 5em;
-	color: lightseagreen;
+	color: yellow;
 }
 
 .navbar-font-size {

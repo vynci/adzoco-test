@@ -24,6 +24,7 @@ html,body {
   color:white;
 	height: 70px;
 	padding-top: 7px;
+	border-bottom: 1px solid darkgray;
 }
 
 .navbar-trans-initial {

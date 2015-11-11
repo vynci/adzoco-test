@@ -39,12 +39,15 @@ html,body {
 	height: 70px;
 	padding-top: 7px;
 	border-bottom: 1px solid darkgray;
+	min-height: 0px;
 }
 
 .navbar-trans-initial {
 	border-top: 4px solid #dc5d54;
 	 border-width: 4px 4px 4px;
 	color:#dc5d54;
+	min-height: 0px;
+	z-index: 2000;
 }
 
 .navbar-logo {
@@ -122,10 +125,6 @@ section {
 	font-size: 2em;
 }
 
-.well {
-	border-color:transparent;
-}
-
 a.list-group-item.active,[class*='-info'] {
 	background-color: #168ccc;
     color:#fff;
@@ -138,7 +137,7 @@ a.list-group-item.active,[class*='-info'] {
 }
 
 #section2 {
-	background-color: #e5e5ef;
+	background-color: #fff;
     color:#686868;
 }
 

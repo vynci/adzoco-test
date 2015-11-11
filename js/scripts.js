@@ -34,11 +34,11 @@ $(document).ready(function(){/* activate scrollspy menu */
 
   var $w = $(window).scroll(function(){
     if ( $w.scrollTop() > 200 ) {
-      $('#scrolled-nav-bar').fadeIn( 'fast' );
-      $('#initial-nav-bar').hide();
+      $('#scrolled-nav-bar').slideDown( 'fast' );
+      $('#initial-nav-bar').slideUp('fast');
     } else {
-      $('#scrolled-nav-bar').hide();
-      $('#initial-nav-bar').fadeIn( 'fast' );
+      $('#scrolled-nav-bar').slideUp('fast');
+      $('#initial-nav-bar').slideDown( 'fast' );
     }
   });
 

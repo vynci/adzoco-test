@@ -8,11 +8,14 @@ in your HTML file.
 license: MIT
 author: bootply.com
 */
-
 html,body {
-	height:100%;
-}
 
+}
+@media screen and (min-width: 801px) {
+	html,body {
+		height:100%;
+	}
+}
 .black-overlay {
 	content: " ";
 	display: block;

@@ -25,6 +25,10 @@ img {
 	width: 79%;
 }
 
+.sec1-symbols {
+	padding-top: 3%;
+}
+
 .sec1-img3{
 	margin-bottom: 10%;
 }
@@ -167,12 +171,11 @@ a.list-group-item.active,[class*='-info'] {
 #section3 {
 	background-color: #eef3f7;
   color:#1382c7;
-	font-size: 1em;
 }
 
 #section4 {
 	background-color: #fff;
-    color:#444;
+	color:#1382c7;
 }
 
 #section5,#section7,#section7 a {

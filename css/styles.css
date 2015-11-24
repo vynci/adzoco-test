@@ -157,11 +157,27 @@ a.list-group-item.active,[class*='-info'] {
     color:#fff;
 }
 
+.header-banner {
+	width:100%;
+}
 #section1 {
-	background-color: #2ecece;
+	background: url(../res/Building.png) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	background-color: #428bca;
+	/*background-image: url('../res/Building.png');
+	background-repeat: round;*/
   color:white;
 	border-bottom: 3px solid #dc5d54;
 }
+
+
 
 #section2 {
 	background-color: #fff;
@@ -186,20 +202,6 @@ a.list-group-item.active,[class*='-info'] {
 #section6 {
 	background-color: #168ccc;
     color:#ddd;
-}
-
-.video-container {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 56.25%;
-}
-.video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
 }
 
 footer {

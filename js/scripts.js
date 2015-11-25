@@ -103,3 +103,65 @@ $(document).ready(function(){/* activate scrollspy menu */
   });
 
 });
+
+// $("#flashes").animate({ top: "1px" }, "slow", "swing", animDown);
+//
+// function animDown() {
+//   $("#flashes").animate({ top: "5px" }, "slow", "swing", animUp);
+// }
+//
+// function animUp() {
+//   $("#flashes").animate({ top: "1px" }, "slow", "swing", animDown);
+// }
+//
+// $("#flashes2").animate({ top: "1px" }, "slow", "swing", animDown2);
+//
+// function animDown2() {
+//   $("#flashes2").animate({ top: "5px" }, "slow", "swing", animUp2);
+// }
+//
+// function animUp2() {
+//   $("#flashes2").animate({ top: "1px" }, "slow", "swing", animDown2);
+// }
+
+interact('.resize-drag')
+.draggable({
+  onmove: window.dragMoveListener
+})
+.resizable({
+  preserveAspectRatio: false,
+  edges: { left: false, right: true, bottom: false, top: false }
+})
+.on('resizemove', function (event) {
+  var target = event.target,
+
+  x = (parseFloat(target.getAttribute('data-x')) || 0),
+  y = (parseFloat(target.getAttribute('data-y')) || 0);
+  console.log(event);
+
+  // update the element's style
+  target.style.width  = event.rect.width + 'px';
+
+  // translate when resizing from top or left edges
+  x += event.deltaRect.left;
+
+  target.style.webkitTransform = target.style.transform =
+  'translate(' + x + 'px,' + y + 'px)';
+
+  target.setAttribute('data-x', x);
+  // target.textContent = Math.round(event.rect.width) + '×' + Math.round(event.rect.height);
+});
+
+
+function printMousePos(e) {
+  var cursorX = e.clientX;
+
+  $('#resize-content').animate({
+    width: cursorX,
+  }, 1000, function() {
+    // Animation complete.
+  });
+}
+$(".test-title").css( { marginLeft : (0.185048113 * $(window).width()) } );
+console.log($(window).width());
+document.addEventListener("click", printMousePos);

@@ -237,18 +237,17 @@ footer .nav>li>a:hover {
 	height: 100%;
 	background-color: #29e;
 	color: white;
-	font-size: 20px;
 	font-family: sans-serif;
 
 	padding: 10px;
 
-	width: 51%;
+	width: 1%;
 
 	box-sizing: border-box;
 	overflow: hidden;
 
-	padding-top: 15%;
-	font-size: 40px;
+	padding-top: 8%;
+	font-size: 30px;
 	position: absolute;
 	white-space: nowrap;
 }
@@ -257,9 +256,13 @@ footer .nav>li>a:hover {
 	margin-left: 250px;
 }*/
 
+.test-image{
+	width: 400px;
+}
+
 .title-back {
 	position: absolute;
 	color: #1A1A1A;
-	padding-top: 15%;
+	padding-top: 8%;
 	padding-left: 19%;
 }

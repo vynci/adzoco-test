@@ -137,7 +137,6 @@ interact('.resize-drag')
 
   x = (parseFloat(target.getAttribute('data-x')) || 0),
   y = (parseFloat(target.getAttribute('data-y')) || 0);
-  console.log(event);
 
   // update the element's style
   target.style.width  = event.rect.width + 'px';
@@ -156,12 +155,63 @@ interact('.resize-drag')
 function printMousePos(e) {
   var cursorX = e.clientX;
 
-  $('#resize-content').animate({
+$('#resize-content').animate({
     width: cursorX,
   }, 1000, function() {
     // Animation complete.
   });
 }
+
+$('#resize-content').animate({
+  width: ($(window).width()/3),
+}, 1500, function() {
+  // Animation complete.
+});
+
 $(".test-title").css( { marginLeft : (0.185048113 * $(window).width()) } );
-console.log($(window).width());
+
 document.addEventListener("click", printMousePos);
+
+var images = new Array ('res/new-window-1.png', 'res/new-window-2.png', 'res/new-window-3.png');
+var index = 1;
+
+function rotateImage()
+{
+  $('#myImage').hide(0, function(){
+    $(this).attr('src', images[index]);
+    $(this).fadeIn(0, function(){
+      if (index == images.length-1){
+        index = 0;
+      } else {
+        index++;
+      }
+    });
+  });
+}
+
+$(document).ready(function()
+{
+  setInterval (rotateImage, 2000);
+});
+
+var images1 = new Array ('res/new-window-3.png', 'res/new-window-2.png', 'res/new-window-1.png');
+var index1 = 1;
+
+function rotateImage1()
+{
+  $('#myImage1').hide(0, function(){
+    $(this).attr('src', images1[index1]);
+    $(this).fadeIn(0, function(){
+      if (index1 == images1.length-1){
+        index1 = 0;
+      } else {
+        index1++;
+      }
+    });
+  });
+}
+
+$(document).ready(function()
+{
+  setInterval (rotateImage1, 2000);
+});

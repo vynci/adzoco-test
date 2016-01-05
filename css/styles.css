@@ -9,7 +9,7 @@ license: MIT
 author: bootply.com
 */
 html,body {
-
+	height:100%;
 }
 @media screen and (min-width: 801px) {
 	html,body {
@@ -17,8 +17,30 @@ html,body {
 	}
 }
 
+p {
+	text-align: justify;
+	color: #1A1A1A;
+}
+
+button {
+	border-radius: 30px !important;
+}
 img {
 	width: 100%;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .sec1-img2{
@@ -34,11 +56,75 @@ img {
 }
 
 .sec2-img{
-	width: 80%;
+	width: 55%;
+}
+
+.sec2-img-center{
+	text-align: center;
+}
+
+.sec2-text-justify{
+	text-align: left;
+	background: white;
+	padding: 10px 10px 10px 10px;
+	border-radius: 5px;
+	opacity: 0.9;
+}
+
+.section2-header-text {
+	font-family: Georgia,Times,Times New Roman,serif;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.text-callout-number{
+	font-size: 3em;
+}
+
+.text-callou-number-bg{
+	text-align: center;
+	color: white;
+}
+
+.bg-skyblue {
+	background: lightskyblue;
+}
+
+.bg-green {
+	background: #51f653;
+}
+
+.bg-lightblue {
+	background: #29e;
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.sec23-money-splash{
+	width: 30%;
+	float: left;
+	right: 30%;
+	position: absolute;
+	top: 240%;
+	z-index: 10;
 }
 
 .sec3-img{
-	width: 25%;
+	width: 75%;
+}
+.sec3-img-left{
+	text-align: left;
+}
+.sec3-text-justify{
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+#man-relax {
+	-webkit-animation-duration: 5s;
+	-webkit-animation-delay: 3s;
 }
 
 
@@ -63,10 +149,11 @@ img {
 .navbar-trans {
 	background-color:white;
   color:white;
-	height: 70px;
-	padding-top: 7px;
+	height: 51px;
+	padding-top: 0px;
 	border-bottom: 1px solid darkgray;
 	min-height: 0px;
+	opacity: 0.9;
 }
 
 .navbar-trans-initial {
@@ -127,7 +214,7 @@ img {
 }
 
 section {
-	padding-top:70px;
+	padding-top:1%;
     padding-bottom:50px;
     min-height:calc(100% - 1px);
 }
@@ -160,12 +247,28 @@ a.list-group-item.active,[class*='-info'] {
 .header-banner {
 	width:100%;
 }
+
+#pre-section {
+
+	background-image: url("../res/new/building-bg1.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	/*background-size:contain;*/
+
+	border-top: 3px solid #dc5d54;
+	background-color: white;
+	color:#686868;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
 #section1 {
-	/*background: url(../res/building-banner.png) no-repeat center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;*/
+	background: url(../res/building-banner.png);
+	background-repeat: no-repeat;
+	/*background-position: center bottom;*/
+	background-position-y: 100%;
+
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-left: 0px;
@@ -180,19 +283,29 @@ a.list-group-item.active,[class*='-info'] {
 
 
 #section2 {
+
+	background-image: url("../res/new/house-bg.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	/*background-size:contain;*/
+
 	border-top: 3px solid #dc5d54;
-	background-color: #fff;
-    color:#686868;
+	background-color: lightcyan;
+	color:#686868;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 #section3 {
-	background-color: #eef3f7;
+	padding-top: 10%;
+	background-color: #fff;
   color:#1382c7;
 }
 
 #section4 {
-	background-color: #fff;
-	color:#1382c7;
+	padding-top: 20%;
+	background-color: #29e;
+	color:#fff;
 }
 
 #section5,#section7,#section7 a {
@@ -234,12 +347,14 @@ footer .nav>li>a:hover {
 	cursor:    -moz-grab;
 	cursor:         grab;
 
+	background: url(../res/building-banner-dark.png);
+	background-repeat: no-repeat;
+	/*background-position: center bottom;*/
+	background-position-y: 100%;
 	height: 100%;
 	background-color: #29e;
 	color: white;
 	font-family: sans-serif;
-
-	padding: 10px;
 
 	width: 1%;
 
@@ -247,22 +362,60 @@ footer .nav>li>a:hover {
 	overflow: hidden;
 
 	padding-top: 8%;
-	font-size: 30px;
 	position: absolute;
 	white-space: nowrap;
 }
 
-/*.test-title {
-	margin-left: 250px;
-}*/
+.resize-drag-mobile {
+	cursor: -webkit-grab;
+	cursor:    -moz-grab;
+	cursor:         grab;
+
+	background: url(../res/building-banner-dark.png);
+	background-repeat: no-repeat;
+	/*background-position: center bottom;*/
+	background-position-y: 100%;
+	height: 100%;
+	background-color: #29e;
+	color: white;
+	font-family: sans-serif;
+
+	width: 1%;
+
+	box-sizing: border-box;
+	overflow: hidden;
+
+	padding-top: 20%;
+	position: absolute;
+	white-space: nowrap;
+}
+
+.test-title {
+	padding-left: 30px;
+}
+
+.test-title-header{
+	padding-left: 100px;
+}
+
+.test-title-mobile {
+	padding-left: 36px;
+}
 
 .test-image{
-	width: 400px;
+	width: 850px;
 }
 
 .title-back {
 	position: absolute;
 	color: #1A1A1A;
 	padding-top: 8%;
-	padding-left: 19%;
+	padding-left: 0%;
+}
+
+.title-back-mobile {
+	position: absolute;
+	color: #1A1A1A;
+	padding-top: 20%;
+	padding-left: 0%;
 }
